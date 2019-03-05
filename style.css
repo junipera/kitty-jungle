@@ -42,7 +42,7 @@ p{
     justify-content: center;
     align-items: center;
 }
-.tree-container{
+.background{
     height: 400px;
     width: auto;
 }
@@ -73,21 +73,37 @@ button{
 .container2{
     height: 100px;
     width: 100%;
-    margin: 0 5%;
+    margin: auto 20%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
-.gamePlayButton{
+.gamePlayButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#pet{
     height: 45px;
     width: 60px;
     text-align: center; 
+}
+#arrow{
+    height: 45px;
+    width: 60px;
+    text-align: center;
+}
+.background{
+
 }
 #landing{
     display: block;
 }
 #aboutPage{
+    display: none;
+}
+#game{
     display: none;
 }
 
