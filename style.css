@@ -79,6 +79,16 @@ button{
     justify-content: flex-end;
     align-items: center;
 }
+#arrow{
+    height: 45px;
+    width: 60px;
+    text-align: center;
+}
+#replay2{
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+}
 .container3{
     height: 10%;
     width: 100%;
@@ -87,21 +97,12 @@ button{
     flex-direction: row;
     justify-content: space-around;
 }
-.gamePlayButton {
+#friendBar{
+    height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-#pet{
-    display: none;
-    height: 45px;
-    width: 60px;
-    text-align: center; 
-}
-#arrow{
-    height: 45px;
-    width: 60px;
-    text-align: center;
 }
 #landing{
     display: block;
@@ -123,18 +124,31 @@ button{
 #heart.flash{
     opacity: 1;
 }
+
+#level1{
+    display:block;
+}
 #cat1-level1{
     display: block;
     margin: 0 auto;
     margin-bottom: 25%;
 }
-#level1{
-    display:block;
-}
 #level2{
+    height: 300px;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+#cat1-level2{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25%;
+}
+#cat2-level2{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25%;
 }
 #level3{
     display: none;
@@ -142,24 +156,19 @@ button{
 #lose{
     display: none;
 }
-#friendBar{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
 .emojiCat{
-    background-image: url(images/cartoon-heart-eyes-5.png)
+    background-image: url(images/cartoon-heart-eyes-5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin: 30px 100px;
 }
-#cat1-level2{
-    display: flex;
-}
-#cat2-level2{
-    display: flex;
-}
+
+
 #scratch{
-    margin: 0 auto;
+    display: block;
+    margin: 0 35%;
 }
 
 /* font-family: 'Marck Script', cursive;
