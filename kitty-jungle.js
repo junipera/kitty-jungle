@@ -12,7 +12,7 @@ const startGame = document.getElementById('startGame')
 const ruleButton= document.getElementById('goToAbout')
 const returnHome = document.getElementById('replay')
 const playAgain = document.getElementById('replay2')
-const next = document.getElementById('arrow')
+const arrow = document.getElementById('arrow')
 const petButton = document.getElementById('pet')
 const petCat1 = document.getElementById('cat1')
 //additional variables
@@ -22,6 +22,9 @@ let catScratch = document.getElementById('scratch')
 const happiness = document.getElementById('heart')
 let count = 0
 
+//for MVP
+arrow.style.display='none'
+
 //functions
 let checkRules = function(){
     landingPage.style.display='none';
@@ -30,9 +33,11 @@ let checkRules = function(){
 
 let refresh = function(){
     count=0;
-    loser.style.display='none'
-    levelCounter.length = 0;
+    loser.style.display='none';
     gamePlayPage.style.display='block';
+    playAgain.style.display='none';
+    arrow.style.display='block';
+    happiness.style.display='block';
 }
 
 let goHome = function(){
@@ -44,7 +49,7 @@ let goHome = function(){
 let playGame = function(){
     refresh();
     landingPage.style.display='none';
-    gamePlayPage.style.display='block';
+    lev1.style.display = 'block'
     lev2.style.display='none';
 }
 
@@ -65,8 +70,8 @@ let nextLevel = function(){
 }
 
 let petCat = function() {
-    let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 250);
-    setTimeout(() => { clearInterval(heartFlash)}, 1000)
+    let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 200);
+    setTimeout(() => { clearInterval(heartFlash)}, 800)
     count += 1;
     if (lev1.style.display='block') {
         levelOneLoveMeter()
@@ -80,7 +85,7 @@ let createBadge = function(){
 }
 
 let catAttack = function (){
-    happiness.style.display= 'none'
+    happiness.style.display='none'
     arrow.style.display= 'none'
     lev1.style.display='none'
     loser.style.display='block'
@@ -91,7 +96,9 @@ let catAttack = function (){
 let levelOneLoveMeter = function(){ 
    if (count === 2) {
     createBadge()
-    alert("You made a cat friend! Go to Level 2")
+    alert("You made a cat friend!")
+    playAgain.style.display='inline'
+    arrow.style.display='none'
    } else if (count === 3) {
     catAttack()
     alert("You went too far, and your cat friend attacked!")
@@ -103,5 +110,5 @@ ruleButton.addEventListener('click', checkRules)
 returnHome.addEventListener('click', goHome)
 playAgain.addEventListener('click', goHome)
 startGame.addEventListener('click', playGame)
-next.addEventListener('click', nextLevel)
+// next.addEventListener('click', nextLevel)
 petCat1.addEventListener('click', petCat)

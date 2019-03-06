@@ -80,6 +80,7 @@ button{
     align-items: center;
 }
 #arrow{
+    display: block;
     height: 45px;
     width: 60px;
     text-align: center;
