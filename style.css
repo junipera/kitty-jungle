@@ -93,6 +93,7 @@ button{
     justify-content: flex-end;
 }
 #pet{
+    display: none;
     height: 45px;
     width: 60px;
     text-align: center; 
@@ -122,7 +123,7 @@ button{
 #heart.flash{
     opacity: 1;
 }
-#cat1{
+#cat1-level1{
     display: block;
     margin: 0 auto;
     margin-bottom: 25%;
@@ -131,10 +132,34 @@ button{
     display:block;
 }
 #level2{
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 #level3{
     display: none;
+}
+#lose{
+    display: none;
+}
+#friendBar{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.emojiCat{
+    background-image: url(images/cartoon-heart-eyes-5.png)
+}
+#cat1-level2{
+    display: flex;
+}
+#cat2-level2{
+    display: flex;
+}
+#scratch{
+    margin: 0 auto;
 }
 
 /* font-family: 'Marck Script', cursive;
