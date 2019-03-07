@@ -36,7 +36,7 @@ let checkRules = function(){
 }
 
 let refresh = function(){
-    count=0;
+    count=0;  
     loser.style.display='none';
     gamePlayPage.style.display='block';
     playAgain.style.display='none';
@@ -45,18 +45,10 @@ let refresh = function(){
 }
 
 let goHome = function(){
-    refresh()
+    count=0;  
     aboutPage.style.display='none';
     landingPage.style.display='block';
-    gamePlayPage.style.display='none';
 }
-
-// let playGame = function(){
-//     refresh();
-//     landingPage.style.display='none';
-//     lev1.style.display = 'block'
-//     lev2.style.display='none';
-// }
 
 let createBadge = function(){
     const newDiv = document.createElement('div')
@@ -109,7 +101,7 @@ let levelTwoLoveMeter = function(){
     if (count === 2) {
         createBadge()
         createBadge()
-        alert('You made more cat friends!')
+        alert('You made more cat friends! Go to Level 3.')
     } else if (count === 3) {
         catAttack()
     }
@@ -139,11 +131,20 @@ let levelThreeLoveMeter = function() {
         createBadge()
         createBadge()
         createBadge()
-        alert('You made more cat friends and won the game!')
-        arrow.style.display='block'
-        arrow.addEventListener('click', winScreen)
+        alert('You made more cat friends!')
     } else if (count === 4) {
         catAttack()
+    }
+    checkWinner()
+}
+
+let checkWinner = function(){
+    if (friendCounter.childElementCount < 5){
+        playAgain.style.display='inline'    
+    } else if (friendCounter.childElementCount>=5){
+        playAgain.style.display='none'
+        arrow.style.display='block'
+        arrow.addEventListener('click', winScreen)
     }
 }
 
@@ -162,6 +163,7 @@ let levelThreePlay = function(){
         count += 1;
         levelThreeLoveMeter()
     }
+
     petCat31.addEventListener('click', petCat)
     petCat32.addEventListener('click', petCat)
     petCat33.addEventListener('click', petCat)
@@ -172,6 +174,8 @@ let winScreen = function(){
     lev2.style.display='none'
     lev3.style.display='none'
     win.style.display='inline-flex'
+    playAgain.style.display='inline'
+    levelCounter.innerHTML='<h2>You win!</h2>'  
 }
 
 //event listeners
@@ -179,4 +183,3 @@ ruleButton.addEventListener('click', checkRules)
 returnHome.addEventListener('click', goHome)
 playAgain.addEventListener('click', goHome)
 startGame.addEventListener('click', levelOnePlay)
-// arrow.addEventListener('click', nextLevel)
