@@ -183,8 +183,10 @@ button{
     display: none;
 }
 #scratch{
-    display: block;
+    opacity: 1;
     margin: 0 35%;
+    animation: SCRATCH 3s ease-in;
+    animation-iteration-count: 1;
 }
 #win{
     display: inline-flex;
@@ -208,4 +210,13 @@ button{
 }
 #win-cat1-level2{
     margin-left: -15px;
+}
+
+@keyframes SCRATCH {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
 }
