@@ -91,7 +91,7 @@ button{
     margin: 0 auto;
 }
 .container3{
-    height: 10%;
+    height: 100px;
     width: 100%;
     margin: 0 auto;
     display: flex; 
@@ -101,9 +101,22 @@ button{
 #friendBar{
     height: 100%;
     width: 50%;
+    margin: 3.5% 100px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+.emojiCat{
+    background-image: url(images/cartoon-heart-eyes-5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    /* margin: 30px 100px; */
+}
+.emojiCat .angry{
+    background-image: url(images/Angry-Cat-Emoji.png)
 }
 #landing{
     display: block;
@@ -137,9 +150,11 @@ button{
 #level2{
     height: 300px;
     width: auto;
-    display: flex;
-    flex-direction: row;
+    margin: 10% 30%;
+    display: inline-flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
 }
 #cat1-level2{
     display: flex;
@@ -152,21 +167,32 @@ button{
     margin-bottom: 25%;
 }
 #level3{
-    display: none;
+    height: 300px;
+    width: auto;
+    margin: 8% 37%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#cat1-level3{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25%;
+}
+#cat2-level3{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25%;
+}
+#cat3-level3{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25%;
 }
 #lose{
     display: none;
 }
-.emojiCat{
-    background-image: url(images/cartoon-heart-eyes-5.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
-    margin: 30px 100px;
-}
-
-
 #scratch{
     display: block;
     margin: 0 35%;
