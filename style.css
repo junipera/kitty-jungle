@@ -3,7 +3,7 @@ body {
      #e39858, #cd963f, #b19527, 
      #929511, #6d9305, #568b0b, #3d8311, #1d7b17, 
      #186c16, #145e15, #115013, #0e4211);
-    background-color: #248F17;
+    background-color: #0e4211;
     background-repeat: no-repeat;
 }
 h1{
@@ -11,7 +11,7 @@ h1{
     font-size: 80px;
     letter-spacing: 8px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 /* EXPERIMENT: TEXT GRADIENT */
 /* .title{
@@ -43,15 +43,16 @@ p{
     align-items: center;
 }
 .background{
-    height: 300px;
+    height: 60vh;
     width: auto;
 }
 footer{
     margin: 0 auto;
+    margin-top: -60px;
     margin-bottom: 50px;
 }
 .container1{
-    height: 100px;
+    height: 20vh;
     width: 70px;
     margin: 0 50%;
     display: flex;
@@ -73,7 +74,7 @@ button{
 .container2{
     height: 100px;
     width: 100%;
-    margin: 10% 30%;
+    margin: 5% 30%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -91,19 +92,31 @@ button{
     margin: 0 auto;
 }
 .container3{
-    height: 10%;
+    height: 100px;
     width: 100%;
     margin: 0 auto;
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
 }
+#levelBar{
+    margin-left:5%;
+}
 #friendBar{
     height: 100%;
     width: 50%;
+    margin: 3.5% 100px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+.emojiCat{
+    background-image: url(images/cartoon-heart-eyes-5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
 }
 #landing{
     display: block;
@@ -113,6 +126,8 @@ button{
 }
 #game{
     display: none;
+    height: 100%;
+    width: 100%;
 }
 #heart{
     display: block;
@@ -125,7 +140,6 @@ button{
 #heart.flash{
     opacity: 1;
 }
-
 #level1{
     display:block;
 }
@@ -137,42 +151,53 @@ button{
 #level2{
     height: 300px;
     width: auto;
-    display: flex;
-    flex-direction: row;
+    margin: 10% 35%;
+    display: inline-flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
 }
-#cat1-level2{
+.kitty{
     display: flex;
     margin: 0 auto;
-    margin-bottom: 25%;
-}
-#cat2-level2{
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 25%;
+    margin-bottom: 25%;   
 }
 #level3{
-    display: none;
+    height: 300px;
+    width: auto;
+    margin: 8% 37%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 #lose{
     display: none;
 }
-.emojiCat{
-    background-image: url(images/cartoon-heart-eyes-5.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
-    margin: 30px 100px;
-}
-
-
 #scratch{
     display: block;
     margin: 0 35%;
 }
-
-/* font-family: 'Marck Script', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Architects Daughter', cursive;
-font-family: 'Varela', sans-serif; */
+#win{
+    display: inline-flex;
+}
+#catContain{
+    margin: 0 auto;
+    margin-left: 25%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.winning{
+    display: flex;
+    margin-right: -20px;
+    margin-left: -15px;
+}
+#win-cat1-level1{
+    margin-right: -30px;
+    margin-left: 10px;
+}
+#win-cat1-level2{
+    margin-left: -15px;
+}
