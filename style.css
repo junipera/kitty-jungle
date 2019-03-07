@@ -3,7 +3,7 @@ body {
      #e39858, #cd963f, #b19527, 
      #929511, #6d9305, #568b0b, #3d8311, #1d7b17, 
      #186c16, #145e15, #115013, #0e4211);
-    background-color: #248F17;
+    background-color: #0e4211;
     background-repeat: no-repeat;
 }
 h1{
@@ -11,7 +11,7 @@ h1{
     font-size: 80px;
     letter-spacing: 8px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 /* EXPERIMENT: TEXT GRADIENT */
 /* .title{
@@ -43,15 +43,16 @@ p{
     align-items: center;
 }
 .background{
-    height: 300px;
+    height: 60vh;
     width: auto;
 }
 footer{
     margin: 0 auto;
+    margin-top: -60px;
     margin-bottom: 50px;
 }
 .container1{
-    height: 100px;
+    height: 20vh;
     width: 70px;
     margin: 0 50%;
     display: flex;
@@ -73,7 +74,7 @@ button{
 .container2{
     height: 100px;
     width: 100%;
-    margin: 10% 30%;
+    margin: 5% 30%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -97,6 +98,9 @@ button{
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
+}
+#levelBar{
+    margin-left:5%;
 }
 #friendBar{
     height: 100%;
@@ -122,6 +126,8 @@ button{
 }
 #game{
     display: none;
+    height: 100%;
+    width: 100%;
 }
 #heart{
     display: block;
@@ -145,7 +151,7 @@ button{
 #level2{
     height: 300px;
     width: auto;
-    margin: 10% 30%;
+    margin: 10% 35%;
     display: inline-flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -177,8 +183,21 @@ button{
 }
 #catContain{
     margin: 0 auto;
-    display: flex;
+    margin-left: 25%;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.winning{
+    display: flex;
+    margin-right: -20px;
+    margin-left: -15px;
+}
+#win-cat1-level1{
+    margin-right: -30px;
+    margin-left: 10px;
+}
+#win-cat1-level2{
+    margin-left: -15px;
 }
