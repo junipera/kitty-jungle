@@ -1,6 +1,6 @@
 # Kitty jungle
 ## A game for making cat friends in the kitty jungle (HTML, CSS, JS)
-[link coming soon]
+[Kitty Jungle](https://juniperalcorn.github.io/kitty-jungle/)
 
 ### Gameplay
 In the Kitty Jungle, the player encounters new feral cats, and befriends them with careful pets. On every screen, there are two buttons: “pet” and an arrow to go to the next level. At any time, the player can click “pet” to pet the cat, or the arrow in order to meet the next cat. 
@@ -10,7 +10,7 @@ The object of the game is to gain cat friends! You make a new cat friend by pett
 But be careful! After you make a new cat friend and receive a special badge, if you continue petting your new cat friend instead of moving on to the next level, the cat will become overstimulated and attack! If this happens, you have lost the game. But you can always try again! 
 
 ### Wireframes 
-(coming soon)
+[Kitty Jungle Wireframes](https://docs.google.com/presentation/d/1EliE9P8FJQPSlVGMvKOTeP0FSyYjuOjiM-WTGwBdJs4/edit?usp=sharing).
 
 ### Screenshots
 (coming soon)
