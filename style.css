@@ -197,6 +197,9 @@ button{
     display: block;
     margin: 0 35%;
 }
+#win{
+    display: inline-flex;
+}
 
 /* font-family: 'Marck Script', cursive;
 font-family: 'Monoton', cursive;

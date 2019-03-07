@@ -7,6 +7,7 @@ const lev1 = document.getElementById('level1')
 const lev2 = document.getElementById('level2')
 const lev3 = document.getElementById('level3')
 const loser = document.getElementById('lose')
+const win = document.getElementById('win')
 //button variables
 const startGame = document.getElementById('startGame')
 const ruleButton= document.getElementById('goToAbout')
@@ -69,6 +70,7 @@ let catAttack = function (){
     lev1.style.display='none'
     lev2.style.display='none'
     lev3.style.display='none'
+    win.style.display='none'
     loser.style.display='block'
     playAgain.style.display='inline'
     while (friendCounter.hasChildNodes()){
@@ -92,6 +94,7 @@ let levelOnePlay = function(){
     lev1.style.display = 'block'
     lev2.style.display='none'; 
     lev3.style.display='none';
+    win.style.display='none'
     let petCat = function() {
         let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 100);
         setTimeout(() => { clearInterval(heartFlash)}, 400)
@@ -117,6 +120,7 @@ let levelTwoPlay = function (){
     lev1.style.display='none' 
     lev2.style.display='inline-flex'
     lev3.style.display='none'
+    win.style.display='none'
     levelCounter.innerHTML='<h2>Level 2</h2>'
 
     petCat = function() {
@@ -136,6 +140,8 @@ let levelThreeLoveMeter = function() {
         createBadge()
         createBadge()
         alert('You made more cat friends and won the game!')
+        arrow.style.display='block'
+        arrow.addEventListener('click', winScreen)
     } else if (count === 4) {
         catAttack()
     }
@@ -143,9 +149,11 @@ let levelThreeLoveMeter = function() {
 
 let levelThreePlay = function(){
     count = 0;
+    arrow.style.display='none'
     lev1.style.display='none'
     lev2.style.display='none'
     lev3.style.display='inline-flex'
+    win.style.display='none'
     levelCounter.innerHTML='<h2>Level 3</h2>'
 
     petCat = function() {
@@ -157,6 +165,13 @@ let levelThreePlay = function(){
     petCat31.addEventListener('click', petCat)
     petCat32.addEventListener('click', petCat)
     petCat33.addEventListener('click', petCat)
+}
+
+let winScreen = function(){
+    lev1.style.display='none'
+    lev2.style.display='none'
+    lev3.style.display='none'
+    win.style.display='inline-flex'
 }
 
 //event listeners
