@@ -71,14 +71,13 @@ let catAttack = function (){
 }
 
 let levelOneLoveMeter = function(){ 
-    if (count === 2) {
+    if (count === 3) {
      createBadge()
      alert("You made a cat friend! Go to Level 2.")
-    } else if (count === 3) {
+    } else if (count >= 4) {
      catAttack()
  }
  }
-
 
 let levelOnePlay = function(){
     refresh();
@@ -98,11 +97,11 @@ let levelOnePlay = function(){
 }
 
 let levelTwoLoveMeter = function(){
-    if (count === 2) {
+    if (count === 4) {
         createBadge()
         createBadge()
         alert('You made more cat friends! Go to Level 3.')
-    } else if (count === 3) {
+    } else if (count >= 5) {
         catAttack()
     }
 }
@@ -127,15 +126,15 @@ let levelTwoPlay = function (){
 }
 
 let levelThreeLoveMeter = function() {
-    if (count === 3) {
+    if (count === 6) {
         createBadge()
         createBadge()
         createBadge()
         alert('You made more cat friends!')
-    } else if (count === 4) {
+        checkWinner()
+    } else if (count >= 7) {
         catAttack()
     }
-    checkWinner()
 }
 
 let checkWinner = function(){

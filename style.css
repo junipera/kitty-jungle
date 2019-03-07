@@ -113,10 +113,6 @@ button{
     height: 50px;
     width: 50px;
     margin-left: 10px;
-    /* margin: 30px 100px; */
-}
-.emojiCat .angry{
-    background-image: url(images/Angry-Cat-Emoji.png)
 }
 #landing{
     display: block;
@@ -138,7 +134,6 @@ button{
 #heart.flash{
     opacity: 1;
 }
-
 #level1{
     display:block;
 }
@@ -156,15 +151,10 @@ button{
     justify-content: space-between;
     align-items: center;
 }
-#cat1-level2{
+.kitty{
     display: flex;
     margin: 0 auto;
-    margin-bottom: 25%;
-}
-#cat2-level2{
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 25%;
+    margin-bottom: 25%;   
 }
 #level3{
     height: 300px;
@@ -174,21 +164,6 @@ button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-#cat1-level3{
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 25%;
-}
-#cat2-level3{
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 25%;
-}
-#cat3-level3{
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 25%;
 }
 #lose{
     display: none;
@@ -200,11 +175,6 @@ button{
 #win{
     display: inline-flex;
 }
-#winAnnounce{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 #catContain{
     margin: 0 auto;
     display: flex;
@@ -212,8 +182,3 @@ button{
     justify-content: space-between;
     align-items: center;
 }
-
-/* font-family: 'Marck Script', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Architects Daughter', cursive;
-font-family: 'Varela', sans-serif; */
