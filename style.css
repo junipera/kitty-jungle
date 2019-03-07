@@ -221,7 +221,7 @@ button{
     width: (315px);
 }
 .modal-content{
-    background-color:#EF7D0B;
+    background-color:#003F00;
     margin: auto;
     padding: 5px 10px 5px 10px;
     height: (100% -55px);
@@ -231,15 +231,31 @@ button{
 .modal p{
     font-family: 'Marck Script', cursive;
     font-size: 24px;
-    color: #402E32;
+    color: #EF7D0B;
     text-align: center;
 }
-.close{
-    color: #006E5F;
-    float: right;
-    padding-right: 10px;
-    font-size: 30px;
-    font-weight: bold;
+.modalFriend{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: (315px);
+}
+.modalFriend-content{
+    background-color:#003F00;
+    margin: auto;
+    padding: 5px 10px 5px 10px;
+    height: (100% -55px);
+    width: (315px);
+    border-radius: 25px;
+}
+.modalFriend p{
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: #EF7D0B;
+    text-align: center;
 }
 
 @keyframes SCRATCH {

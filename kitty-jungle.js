@@ -58,6 +58,7 @@ let createBadge = function(){
     const newDiv = document.createElement('div')
     newDiv.setAttribute('class', 'emojiCat')
     friendCounter.appendChild(newDiv)
+    
 }
 
 let catAttack = function (){
@@ -77,8 +78,7 @@ let catAttack = function (){
 let levelOneLoveMeter = function(){ 
     if (count === 3) {
      createBadge()
-     alert("You made a cat friend! Go to Level 2.")
-    // $('#modalFriend').modal('show');
+     friendAnnounce.style.display='block'
     } else if (count >= 4) {
      catAttack()
  }
@@ -105,7 +105,7 @@ let levelTwoLoveMeter = function(){
     if (count === 4) {
         createBadge()
         createBadge()
-        alert('You made more cat friends! Go to Level 3.')
+        friendAnnounce.style.display='block'
     } else if (count >= 5) {
         catAttack()
     }
@@ -113,7 +113,7 @@ let levelTwoLoveMeter = function(){
 
 let levelTwoPlay = function (){
     count=0;
-    $('#modalFriend').modal('hide');
+    friendAnnounce.style.display='none'
     lev1.style.display='none' 
     lev2.style.display='inline-flex'
     lev3.style.display='none'
@@ -136,7 +136,7 @@ let levelThreeLoveMeter = function() {
         createBadge()
         createBadge()
         createBadge()
-        alert('You made more cat friends!')
+        friendAnnounce.style.display='block'
         checkWinner()
     } else if (count >= 7) {
         catAttack()
@@ -155,6 +155,7 @@ let checkWinner = function(){
 
 let levelThreePlay = function(){
     count = 0;
+    friendAnnounce.style.display='none'
     arrow.style.display='none'
     lev1.style.display='none'
     lev2.style.display='none'
@@ -175,6 +176,7 @@ let levelThreePlay = function(){
 }
 
 let winScreen = function(){
+    friendAnnounce.style.display='none'
     lev1.style.display='none'
     lev2.style.display='none'
     lev3.style.display='none'
@@ -184,13 +186,11 @@ let winScreen = function(){
 }
 
 //modal events
-window.onClick=function(event){
-    if (event.target==friendAnnounce){
-        friendAnnounce.style.display='none'
-    } else if (event.target==attackAnnounce){
-        attackAnnounce.style.display='none'
-    }
-}
+// window.onClick=function(event){
+//     if (event.target==friendAnnounce){
+//         friendAnnounce.style.display='none'
+//     } 
+// }
 
 //event listeners
 ruleButton.addEventListener('click', checkRules)
