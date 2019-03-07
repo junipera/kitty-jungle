@@ -14,6 +14,10 @@ const ruleButton= document.getElementById('goToAbout')
 const returnHome = document.getElementById('replay')
 const playAgain = document.getElementById('replay2')
 const arrow = document.getElementById('arrow')
+//modal variables
+const friendAnnounce = document.getElementById('modalFriend')
+const attackAnnounce=document.getElementById('modalAttack')
+const spanClose=document.getElementsByClassName('close')[0]
 //cat variables
 const petCat1 = document.getElementById('cat1')
 const petCat21 = document.getElementById('cat1-level2')
@@ -67,13 +71,14 @@ let catAttack = function (){
     playAgain.style.display='inline'
     while (friendCounter.hasChildNodes()){
     friendCounter.removeChild(friendCounter.firstChild)};
-    alert("You went too far, and your cat friend attacked!")
+    attackAnnounce.style.display='block';
 }
 
 let levelOneLoveMeter = function(){ 
     if (count === 3) {
      createBadge()
      alert("You made a cat friend! Go to Level 2.")
+    // $('#modalFriend').modal('show');
     } else if (count >= 4) {
      catAttack()
  }
@@ -108,6 +113,7 @@ let levelTwoLoveMeter = function(){
 
 let levelTwoPlay = function (){
     count=0;
+    $('#modalFriend').modal('hide');
     lev1.style.display='none' 
     lev2.style.display='inline-flex'
     lev3.style.display='none'
@@ -175,6 +181,15 @@ let winScreen = function(){
     win.style.display='inline-flex'
     playAgain.style.display='inline'
     levelCounter.innerHTML='<h2>You win!</h2>'  
+}
+
+//modal events
+window.onClick=function(event){
+    if (event.target==friendAnnounce){
+        friendAnnounce.style.display='none'
+    } else if (event.target==attackAnnounce){
+        attackAnnounce.style.display='none'
+    }
 }
 
 //event listeners

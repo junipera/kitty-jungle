@@ -211,6 +211,36 @@ button{
 #win-cat1-level2{
     margin-left: -15px;
 }
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: (315px);
+}
+.modal-content{
+    background-color:#EF7D0B;
+    margin: auto;
+    padding: 5px 10px 5px 10px;
+    height: (100% -55px);
+    width: (315px);
+    border-radius: 25px;
+}
+.modal p{
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: #402E32;
+    text-align: center;
+}
+.close{
+    color: #006E5F;
+    float: right;
+    padding-right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
 
 @keyframes SCRATCH {
     0%{
