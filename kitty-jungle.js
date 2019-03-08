@@ -16,7 +16,6 @@ const playAgain = document.getElementById('replay2')
 const arrow = document.getElementById('arrow')
 //modal variables
 const friendAnnounce = document.getElementById('modalFriend')
-const detailFriend = document.getElementById('modalFriendContent')
 const attackAnnounce = document.getElementById('modalAttack')
 //cat variables
 const petCat1 = document.getElementById('cat1')
@@ -33,7 +32,6 @@ let catScratch = document.getElementById('scratch')
 const happiness = document.getElementById('heart')
 let count = 0
 let level = 0
-
 //functions
 let checkRules = function(){
     landingPage.style.display='none';
@@ -86,76 +84,6 @@ let correctFriendAnnounce = function(){
     }
 }
 
-let levelOneLoveMeter = function(){ 
-    if (count === 3) {
-     createBadge()
-     correctFriendAnnounce()
-    } else if (count >= 4) {
-     catAttack()
- }
- }
-
-let levelOnePlay = function(){
-    refresh();
-    level=1
-    landingPage.style.display='none';
-    lev1.style.display = 'block'
-    lev2.style.display='none'; 
-    lev3.style.display='none';
-    win.style.display='none'
-    let petCat = function() {
-        let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 100);
-        setTimeout(() => { clearInterval(heartFlash)}, 400)
-        count += 1;
-        levelOneLoveMeter()
-    }
-    petCat1.addEventListener('click', petCat)
-    arrow.addEventListener('click', levelTwoPlay)
-}
-
-let levelTwoLoveMeter = function(){
-    if (count === 4) {
-        createBadge()
-        createBadge()
-        correctFriendAnnounce()
-    } else if (count >= 5) {
-        catAttack()
-    }
-}
-
-let levelTwoPlay = function (){
-    count=0;
-    level=2
-    friendAnnounce.style.display='none'
-    lev1.style.display='none' 
-    lev2.style.display='inline-flex'
-    lev3.style.display='none'
-    win.style.display='none'
-    levelCounter.innerHTML='<h2>Level 2</h2>'
-
-    petCat = function() {
-        let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 100);
-        setTimeout(() => { clearInterval(heartFlash)}, 400)
-        count += 1;
-        levelTwoLoveMeter()
-    }
-    petCat21.addEventListener('click', petCat)
-    petCat22.addEventListener('click', petCat)
-    arrow.addEventListener('click', levelThreePlay)
-}
-
-let levelThreeLoveMeter = function() {
-    if (count === 6) {
-        createBadge()
-        createBadge()
-        createBadge()
-        correctFriendAnnounce()
-        checkWinner()
-    } else if (count >= 7) {
-        catAttack()
-    }
-}
-
 let checkWinner = function(){
     if (friendCounter.childElementCount < 5){
         playAgain.style.display='inline'    
@@ -164,29 +92,6 @@ let checkWinner = function(){
         arrow.style.display='block'
         arrow.addEventListener('click', winScreen)
     }
-}
-
-let levelThreePlay = function(){
-    count = 0;
-    level=3
-    friendAnnounce.style.display='none'
-    arrow.style.display='none'
-    lev1.style.display='none'
-    lev2.style.display='none'
-    lev3.style.display='inline-flex'
-    win.style.display='none'
-    levelCounter.innerHTML='<h2>Level 3</h2>'
-
-    petCat = function() {
-        let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 100);
-        setTimeout(() => { clearInterval(heartFlash)}, 400)
-        count += 1;
-        levelThreeLoveMeter()
-    }
-
-    petCat31.addEventListener('click', petCat)
-    petCat32.addEventListener('click', petCat)
-    petCat33.addEventListener('click', petCat)
 }
 
 let winScreen = function(){
@@ -199,20 +104,87 @@ let winScreen = function(){
     levelCounter.innerHTML='<h2>You win!</h2>'  
 }
 
-//modal events
-// window.onClick=function(event){
-//     if (event.target==friendAnnounce){
-//         friendAnnounce.style.display='none'
-//     } 
-// }
+let petCat = function() {
+    let heartFlash = setInterval(() => happiness.classList.toggle('flash'), 100);
+    setTimeout(() => { clearInterval(heartFlash)}, 400)
+    count += 1;
+    loveMeter()
+}
+
+//love meter functions
+let loveMeter = function(){
+    if (level===1){
+        if (count === 3) {
+            createBadge()
+            correctFriendAnnounce()
+           } else if (count >= 4) {
+            catAttack()
+        }
+    } else if (level===2){
+        if (count === 4) {
+            createBadge()
+            createBadge()
+            correctFriendAnnounce()
+        } else if (count >= 5) {
+            catAttack()
+        }
+    } else if (level===3){
+        if (count === 6) {
+            createBadge()
+            createBadge()
+            createBadge()
+            correctFriendAnnounce()
+            checkWinner()
+        } else if (count >= 7) {
+            catAttack()
+        } 
+    }
+}
+
+//gameplay functions
+let levelOnePlay = function(){
+    refresh();
+    level=1
+    landingPage.style.display='none';
+    lev1.style.display = 'block'
+    lev2.style.display='none'; 
+    lev3.style.display='none';
+    win.style.display='none'
+    petCat1.addEventListener('click', petCat)
+    arrow.addEventListener('click', levelTwoPlay)
+}
+
+let levelTwoPlay = function (){
+    count=0
+    level=2
+    friendAnnounce.style.display='none'
+    lev1.style.display='none' 
+    lev2.style.display='inline-flex'
+    lev3.style.display='none'
+    win.style.display='none'
+    levelCounter.innerHTML='<h2>Level 2</h2>'
+    petCat21.addEventListener('click', petCat)
+    petCat22.addEventListener('click', petCat)
+    arrow.addEventListener('click', levelThreePlay)
+}
+
+let levelThreePlay = function(){
+    count=0
+    level=3
+    friendAnnounce.style.display='none'
+    arrow.style.display='none'
+    lev1.style.display='none'
+    lev2.style.display='none'
+    lev3.style.display='inline-flex'
+    win.style.display='none'
+    levelCounter.innerHTML='<h2>Level 3</h2>'
+    petCat31.addEventListener('click', petCat)
+    petCat32.addEventListener('click', petCat)
+    petCat33.addEventListener('click', petCat)
+}
 
 //event listeners
 ruleButton.addEventListener('click', checkRules)
 returnHome.addEventListener('click', goHome)
 playAgain.addEventListener('click', goHome)
 startGame.addEventListener('click', levelOnePlay)
-// window.addEventListener('click', function(event){
-//     if (event.target == friendAnnounce){
-//         friendAnnounce.style.display='none'
-//     }
-// })
