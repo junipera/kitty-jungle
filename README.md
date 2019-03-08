@@ -15,12 +15,11 @@ But be careful! After you make a new cat friend and receive a special badge, if 
 ### Screenshots
 ![Kitty Jungle Landing Page](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/page1_fullscreen.png)
 ![Level 1](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/level1.png)
-![Level 1 Attack Alert](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/level1-attack-alert.png)
+![Level 1 Friend Nofication](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/Friend-notification.png)
 ![Level 2](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/level2.png)
-![Level 2 Friend Alert](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/level2-friendAlert.png)
 ![Level 3 with Heart Animation](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/level3-animation.png)
 ![Winning Screen](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/win-screen.png)
-![Losing Screen](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/lose-screen.png)
+![Losing Screen](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/Attack-notification.png)
 ![About](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/about.png)
 ![Rules](https://github.com/juniperalcorn/kitty-jungle/blob/master/images/screenshots/about-2.png)
 
