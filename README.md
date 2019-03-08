@@ -36,3 +36,8 @@ Kitty Jungle is built using JavaScript, HTML, and CSS.
 
 ### About
 Kitty Jungle is a real place! In the summer of 2015, I lived in an ill-maintained apartment building in Bedford-Stuyvesant, Brooklyn. From my second-floor fire escape, I would spend whole afternoons watching the interactions and iterations of a huge feral colony living in the wildly overgrown backyard below. Despite weeds that grew taller than me in some places, there were still enough clear patches to watch batches of spring kittens learning to play, turf-wars between the alpha male and challenging interlopers, and everyday life. My friends and I called it "Kitty Jungle," and wove tales of high melodrama to narrate the little society below.
+
+### Additional Information
+Kitty Jungle is best played on a computer. A future project will be to make a mobile-friendly version of the game.
+
+This game was created as a project for the General Assembly Web Development Immersive. I am thankful to my instructors and classmates for their assistance during development.
