@@ -25,6 +25,12 @@ h2{
     text-align: center;
     margin: 30px auto;
 }
+h3{
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: #EF7D0B;
+    text-align: center;
+}
 p{
     font-family: 'Varela', sans-serif;
     font-size: 14px;
@@ -238,12 +244,12 @@ button{
     display: none;
     position: fixed;
     top: 50%;
-    left: 82%;
+    left: 81%;
     transform: translate(-50%, -50%);
     height: 50px;
     width: (315px);
 }
-.modalFriend-content{
+.modalFriendContent{
     background-color:#003F00;
     margin: auto;
     padding: 5px 10px 5px 10px;
