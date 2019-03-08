@@ -14,13 +14,17 @@ const ruleButton= document.getElementById('goToAbout')
 const returnHome = document.getElementById('replay')
 const playAgain = document.getElementById('replay2')
 const arrow = document.getElementById('arrow')
+//modal variables
+const friendAnnounce = document.getElementById('modalFriend')
+const detailFriend = document.getElementById('modalFriendContent')
+const attackAnnounce = document.getElementById('modalAttack')
 //cat variables
 const petCat1 = document.getElementById('cat1')
 const petCat21 = document.getElementById('cat1-level2')
 const petCat22 = document.getElementById('cat2-level2')
-const petCat31=document.getElementById('cat1-level3')
-const petCat32=document.getElementById('cat2-level3')
-const petCat33=document.getElementById('cat3-level3')
+const petCat31 = document.getElementById('cat1-level3')
+const petCat32 = document.getElementById('cat2-level3')
+const petCat33 = document.getElementById('cat3-level3')
 //additional variables
 const levelCounter = document.getElementById('levelBar')
 const friendCounter = document.getElementById('friendBar')
@@ -28,6 +32,7 @@ let catBadge = document.getElementsByClassName('emojiCat')
 let catScratch = document.getElementById('scratch')
 const happiness = document.getElementById('heart')
 let count = 0
+let level = 0
 
 //functions
 let checkRules = function(){
@@ -37,6 +42,7 @@ let checkRules = function(){
 
 let refresh = function(){
     count=0;  
+    level=0;
     loser.style.display='none';
     gamePlayPage.style.display='block';
     playAgain.style.display='none';
@@ -45,7 +51,6 @@ let refresh = function(){
 }
 
 let goHome = function(){
-    count=0;  
     aboutPage.style.display='none';
     landingPage.style.display='block';
 }
@@ -53,7 +58,7 @@ let goHome = function(){
 let createBadge = function(){
     const newDiv = document.createElement('div')
     newDiv.setAttribute('class', 'emojiCat')
-    friendCounter.appendChild(newDiv)
+    friendCounter.appendChild(newDiv)  
 }
 
 let catAttack = function (){
@@ -67,13 +72,24 @@ let catAttack = function (){
     playAgain.style.display='inline'
     while (friendCounter.hasChildNodes()){
     friendCounter.removeChild(friendCounter.firstChild)};
-    alert("You went too far, and your cat friend attacked!")
+    attackAnnounce.style.display='block';
+}
+
+let correctFriendAnnounce = function(){
+    friendAnnounce.style.display='block'
+    if (level === 1){
+        friendAnnounce.innerHTML = '<h3>You made a cat friend!<br>Go to the next level.</h3>'
+    } else if (level === 2) {
+        friendAnnounce.innerHTML = '<h3>You made cat friends!<br>Go to the next level.</h3>'
+    } else if (level === 3) {
+        friendAnnounce.innerHTML = '<h3>You made kitten friends!</h3>'
+    }
 }
 
 let levelOneLoveMeter = function(){ 
     if (count === 3) {
      createBadge()
-     alert("You made a cat friend! Go to Level 2.")
+     correctFriendAnnounce()
     } else if (count >= 4) {
      catAttack()
  }
@@ -81,6 +97,7 @@ let levelOneLoveMeter = function(){
 
 let levelOnePlay = function(){
     refresh();
+    level=1
     landingPage.style.display='none';
     lev1.style.display = 'block'
     lev2.style.display='none'; 
@@ -100,7 +117,7 @@ let levelTwoLoveMeter = function(){
     if (count === 4) {
         createBadge()
         createBadge()
-        alert('You made more cat friends! Go to Level 3.')
+        correctFriendAnnounce()
     } else if (count >= 5) {
         catAttack()
     }
@@ -108,6 +125,8 @@ let levelTwoLoveMeter = function(){
 
 let levelTwoPlay = function (){
     count=0;
+    level=2
+    friendAnnounce.style.display='none'
     lev1.style.display='none' 
     lev2.style.display='inline-flex'
     lev3.style.display='none'
@@ -130,7 +149,7 @@ let levelThreeLoveMeter = function() {
         createBadge()
         createBadge()
         createBadge()
-        alert('You made more cat friends!')
+        correctFriendAnnounce()
         checkWinner()
     } else if (count >= 7) {
         catAttack()
@@ -149,6 +168,8 @@ let checkWinner = function(){
 
 let levelThreePlay = function(){
     count = 0;
+    level=3
+    friendAnnounce.style.display='none'
     arrow.style.display='none'
     lev1.style.display='none'
     lev2.style.display='none'
@@ -169,6 +190,7 @@ let levelThreePlay = function(){
 }
 
 let winScreen = function(){
+    friendAnnounce.style.display='none'
     lev1.style.display='none'
     lev2.style.display='none'
     lev3.style.display='none'
@@ -177,8 +199,20 @@ let winScreen = function(){
     levelCounter.innerHTML='<h2>You win!</h2>'  
 }
 
+//modal events
+// window.onClick=function(event){
+//     if (event.target==friendAnnounce){
+//         friendAnnounce.style.display='none'
+//     } 
+// }
+
 //event listeners
 ruleButton.addEventListener('click', checkRules)
 returnHome.addEventListener('click', goHome)
 playAgain.addEventListener('click', goHome)
 startGame.addEventListener('click', levelOnePlay)
+// window.addEventListener('click', function(event){
+//     if (event.target == friendAnnounce){
+//         friendAnnounce.style.display='none'
+//     }
+// })

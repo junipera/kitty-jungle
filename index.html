@@ -16,12 +16,11 @@
   <div class ="background" id="landingBackground"><img src="images/title-image-copy.png" alt="titlePage" id="titleImage" > </div>
 
   <footer>
-    <div class = "container1">
-        <div class ="button"><button type="button" id="startGame">Enter the Jungle</button></div>
-        <div class ="button"><button type ="button" id="goToAbout">About</button></div>
-    </div>
+        <div class = "container1">
+            <div class ="button"><button type="button" id="startGame">Enter the Jungle</button></div>
+            <div class ="button"><button type ="button" id="goToAbout">About</button></div>
+        </div>
     </footer>
-
 </div>
 
 
@@ -34,7 +33,7 @@
     </header>    
     
     <div class="background"> 
-            <div id="heart"><img src="images/juniperHeart.png" alt = "heart"></div>
+        <div id="heart"><img src="images/juniperHeart.png" alt = "heart"></div>
             <!-- img source: https://www.vecteezy.com/vector-art/98029-hearts-icons -->
         
         <div id="level1">
@@ -72,39 +71,52 @@
 
     <div class = "container2">
         <footer>
-        <button type="button" id="replay2" onclick="window.location.reload()">Play Again</button>
-        <button type ="button" id="arrow">-></button>
+            <button type="button" id="replay2" onclick="window.location.reload()">Play Again</button>
+            <button type ="button" id="arrow">-></button>
         </footer>
     </div>
 </div>
 
 <div id="aboutPage">
-        <h1 class="title">Kitty Jungle</h1> 
+    <h1 class="title">Kitty Jungle</h1> 
 
     <div class ="about">
         <div>
             <h2>Rules</h2> 
-            <p>In the Kitty Jungle, the player encounters new feral cats, and befriends them with careful pets. </p>
-            <p>Click the "pet" button to pet the cat.</p>
-            <p>At any time, you can click the arrow button to move on to the next level.</p>
-            <p>To win the level and get a special badge, you must pet the cat enough times to befriend it. When you have made a new cat friend, you will be prompted to go to the next level to meet more cats.</p>
-            <p>But be careful...if you choose not to move on to the next level, and keep petting your cat friend, they might not like it...</p>
-            <p>You lose the game if a cat attacks you!</p>
+                <p>In the Kitty Jungle, the player encounters new feral cats, and befriends them with careful pets. </p>
+                <p>Click the "pet" button to pet the cat.</p>
+                <p>At any time, you can click the arrow button to move on to the next level.</p>
+                <p>To win the level and get a special badge, you must pet the cat enough times to befriend it. When you have made a new cat friend, you will be prompted to go to the next level to meet more cats.</p>
+                <p>But be careful...if you choose not to move on to the next level, and keep petting your cat friend, they might not like it...</p>
+                <p>You lose the game if a cat attacks you!</p>
         </div>
         <div>
             <h2>About</h2>
-            <p>Kitty Jungle is a real place!</p>
-            <p>Inspired by the backyard of my Bed-Stuy apartment in the summer of 2015, when I used to spend whole afternoons watching the feral colony below.</p> 
-            <p>Because my backyard was wildly overgrown with weeds, my friends and I dubbed it "kitty jungle," and narrated daily episodes of drama and kitten-y cuteness.</p>
+                <p>Kitty Jungle is a real place!</p>
+                <p>Inspired by the backyard of my Bed-Stuy apartment in the summer of 2015, when I used to spend whole afternoons watching the feral colony below.</p> 
+                <p>Because my backyard was wildly overgrown with weeds, my friends and I dubbed it "kitty jungle," and narrated daily episodes of drama and kitten-y cuteness.</p>
         </div>
     </div>
         <footer>
             <div class = "container1">
-                    <div class ="button"><button type="button" id="replay">Return to Home</button></div>
+                <div class ="button"><button type="button" id="replay">Return to Home</button></div>
                 <div class ="button"><button type="button" class = "startGame">Enter the Jungle</button></div>
             </div>
         </footer> 
 </div>
+
+    <div class="modalFriend" id="modalFriend">
+        <div class="modalFriendContent">
+                <h3>You made kitten friends!</h3>
+        </div>
+    </div>
+
+    <div class="modal" id="modalAttack">
+        <div class="modal-content">
+            <p id='catAttack'>Kitty Attack!</p>
+            <p>You should respect your friends' boundaries.</p>
+        </div>
+    </div>
 
 <script src="kitty-jungle.js"></script>
 </body>

@@ -25,6 +25,12 @@ h2{
     text-align: center;
     margin: 30px auto;
 }
+h3{
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: #EF7D0B;
+    text-align: center;
+}
 p{
     font-family: 'Varela', sans-serif;
     font-size: 14px;
@@ -210,6 +216,52 @@ button{
 }
 #win-cat1-level2{
     margin-left: -15px;
+}
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: (315px);
+}
+.modal-content{
+    background-color:#003F00;
+    margin: auto;
+    padding: 5px 10px 5px 10px;
+    height: (100% -55px);
+    width: (315px);
+    border-radius: 25px;
+}
+.modal p{
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: #EF7D0B;
+    text-align: center;
+}
+.modalFriend{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: (315px);
+}
+.modalFriendContent{
+    background-color:#003F00;
+    margin: auto;
+    padding: 5px 10px 5px 10px;
+    height: (100% -55px);
+    width: (315px);
+    border-radius: 25px;
+}
+.modalFriend p{
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: #EF7D0B;
+    text-align: center;
 }
 
 @keyframes SCRATCH {
