@@ -3,7 +3,7 @@
 [Kitty Jungle](https://juniperalcorn.github.io/kitty-jungle/)
 
 ### Gameplay
-In the Kitty Jungle, the player encounters new feral cats, and befriends them with careful pets. On every screen, there are two buttons: “pet” and an arrow to go to the next level. At any time, the player can click “pet” to pet the cat, or the arrow in order to meet the next cat. 
+In the Kitty Jungle, the player encounters new feral cats, and befriends them with careful pets. At any time, the player can click on the cat to pet the cat, or click on the arrow button in the lower-right corner in order to meet the next cat. 
 
 The object of the game is to gain cat friends! You make a new cat friend by petting each cat. When the cat has received enough loving pets, the game will alert you that you have a new cat friend, and you will receive a special badge in the upper-right corner of the screen. If you choose to move to the next level before the cat has received enough pets, you will not win the level or get a badge. 
 
