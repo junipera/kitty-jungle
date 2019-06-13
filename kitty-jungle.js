@@ -10,6 +10,7 @@ const loser = document.getElementById('lose')
 const win = document.getElementById('win')
 //button variables
 const startGame = document.getElementById('startGame')
+const startGameAbout = document.getElementById('startGameAbout')
 const ruleButton= document.getElementById('goToAbout')
 const returnHome = document.getElementById('replay')
 const playAgain = document.getElementById('replay2')
@@ -146,6 +147,7 @@ let levelOnePlay = function(){
     refresh();
     level=1
     landingPage.style.display='none';
+    aboutPage.style.display='none';
     lev1.style.display = 'block'
     lev2.style.display='none'; 
     lev3.style.display='none';
@@ -188,3 +190,4 @@ ruleButton.addEventListener('click', checkRules)
 returnHome.addEventListener('click', goHome)
 playAgain.addEventListener('click', goHome)
 startGame.addEventListener('click', levelOnePlay)
+startGameAbout.addEventListener('click', levelOnePlay)
