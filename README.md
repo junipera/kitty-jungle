@@ -1,4 +1,4 @@
-# Kitty jungle
+# Kitty Jungle
 ## A game for making cat friends in the kitty jungle (HTML, CSS, JS)
 [Kitty Jungle](https://juniperalcorn.github.io/kitty-jungle/)
 
